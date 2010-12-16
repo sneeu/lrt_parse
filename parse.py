@@ -7,6 +7,7 @@ from pyquery import PyQuery
 def main():
     stops = []
     xml = file('22.xml').read()
+    # A known bug with pyquery
     xml = xml.replace(' xmlns=', ' xmlnamespace=')
 
     doc = PyQuery(xml)
